@@ -1,5 +1,6 @@
 package com.metehanbolat.kotlinscopefunctions
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.metehanbolat.kotlinscopefunctions.databinding.ActivityMainBinding
@@ -33,6 +34,14 @@ class MainActivity : AppCompatActivity() {
             val number2 = it + 1
             number2
         } ?: 3
+
+        // If we use "apply" when we are going to use more than one property or one property of a class many times, ..
+        // .. we do not need to use the object of the class each time.
+        val intent = Intent().apply {
+            putExtra("", "")
+            putExtra("", 0)
+            action = ""
+        }
 
     }
 
