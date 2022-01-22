@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             this
         }
 
+        // Same with "apply". Even, I don't know how they different from each other.
+        val intent3 = with(Intent()) {
+            putExtra("","")
+        }
     }
 
     // We can use "also" for what we want done after an any operation.
