@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     private var number: Int? = null
 
+    private var i = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -31,5 +33,11 @@ class MainActivity : AppCompatActivity() {
             val number2 = it + 1
             number2
         } ?: 3
+
+    }
+
+    // We can use "also" for what we want done after an any operation.
+    fun getSquaredI() = (i * i).also {
+        i++
     }
 }
