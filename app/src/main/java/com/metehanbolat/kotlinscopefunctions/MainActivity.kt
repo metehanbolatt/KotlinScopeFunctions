@@ -43,6 +43,15 @@ class MainActivity : AppCompatActivity() {
             action = ""
         }
 
+        // "run" works like "apply". But when we use "run", if we want to assign a variable or value, ..
+        // .. we must return the type we want in the last line, otherwise it will be unit.
+        val intent2 = Intent().run {
+            putExtra("", "")
+            putExtra("", 0)
+            action = ""
+            this
+        }
+
     }
 
     // We can use "also" for what we want done after an any operation.
